@@ -1,17 +1,25 @@
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="/lorem-whatsum.css">
 </head>
-
-<link rel="stylesheet" href="/lorem-whatsum.css">
-<script src="/lorem-whatsum.js"></script>
-
+<body>
 <h1 id="lw-page-title">Lorem Whatsum</h1>
 
-<input id="words" type="number" value="100"></input>
-<input id="paras" type="number" value="5"></input>
-<button onclick="makesumWhatsum()">Generate<div class="spinner"></div></button>
+<div class="input-box">
+  <input id="words" class="input" type="number" value="100"></input>
+  <input id="paras" class="input" type="number" value="5"></input>
+</div>
 
-<h2 id="whatsum-title" class="h-l">Lorem Ipsum</h2>
+<!-- <button onclick="makesumWhatsum()">Generate<div class="spinner"></div></button> -->
+<div class="btn-row">
+  <button onclick="getsumRandum(lorem)">Generate Lorem<div class="spinner"></div></button>
+  <button onclick="getsumRandum(pizza)">Generate Za<div class="spinner"></div></button>
+</div>
+
+<div class="results-header">
+  <h2 id="whatsum-title" class="h-l">Lorem Ipsum</h2>
+  <div class="copy-btn" onclick="copyAll()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 224C0 188.7 28.65 160 64 160H128V288C128 341 170.1 384 224 384H352V448C352 483.3 323.3 512 288 512H64C28.65 512 0 483.3 0 448V224zM224 352C188.7 352 160 323.3 160 288V64C160 28.65 188.7 0 224 0H448C483.3 0 512 28.65 512 64V288C512 323.3 483.3 352 448 352H224z"/></svg></div>
+</div>
 <div id="results">
   <p class="placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel erat pretium, sollicitudin nisi ac, rutrum diam. Aliquam erat volutpat. Donec facilisis sollicitudin euismod. Suspendisse vitae sodales velit, in luctus risus. Maecenas id purus vel risus faucibus consectetur. Integer consequat augue vel facilisis eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque et lacus ut nulla tincidunt mollis non quis orci. Pellentesque sit amet dui quis nulla ultrices condimentum eu quis quam. Vivamus ultrices nunc eu metus tempus, ac luctus enim viverra. Suspendisse potenti. Duis ac dolor sem. Duis id lacinia leo. Fusce sodales risus eu lorem vehicula, vel laoreet elit fermentum. Fusce purus felis, ultricies sed tellus eget, dignissim sollicitudin metus.</p>
   <p class="placeholder">Phasellus in quam id magna dignissim placerat. Vivamus fringilla sem sit amet dolor finibus scelerisque. Aenean ultricies pellentesque ex eget lacinia. Phasellus posuere non massa at euismod. Pellentesque sit amet tincidunt mi, nec vestibulum velit. Fusce convallis placerat risus at ultricies. Pellentesque commodo nisl quis aliquet aliquam. In ultricies ante sit amet lectus cursus, ut congue ligula tincidunt. Nam hendrerit non magna quis laoreet. Etiam euismod sodales mi, in congue nulla imperdiet quis. Nulla sed vestibulum nibh. In hac habitasse platea dictumst. Cras vehicula quis nunc ac facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
@@ -21,3 +29,6 @@
 </div>
 
 <p class="sml">Copyright Mathew French a.k.a Frenchwise</p>
+
+<script src="/lorem-whatsum.js" async></script>
+</body>
